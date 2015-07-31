@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+
+  get("/",            { :controller => "movies", :action => "index" })
+  get("/directors",   { :controller => "movies", :action => "directors" })
+  get("/directors/:id", { :controller => "movies", :action => "directorsid" })
+  get("/movies",      { :controller => "movies", :action => "movies" })
+  get("/movies/:id",  { :controller => "movies", :action => "moviesid" })
+  get("/actors",      { :controller => "movies", :action => "actors" })
+  get("/actors/:id",  { :controller => "movies", :action => "actorsid" })
+  get("/delete_director/:id",  { :controller => "movies", :action => "delete_director" })
+  get("/delete_actor/:id",  { :controller => "movies", :action => "delete_actor" })
+  get("/delete_movie/:id",  { :controller => "movies", :action => "delete_movie" })
+
+
+
+
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

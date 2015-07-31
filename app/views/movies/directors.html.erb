@@ -1,0 +1,25 @@
+<h1>
+Directors
+</h1>
+
+
+
+<% @list_of_directors.each do |director| %>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+        <h2><%= director.name %></div>
+        </h2>
+        </div>
+    </div>
+    <div class="row">
+        <ul><div class="col-sm-3"><img src="<%= director.image_url %>" width="80"></ul>
+        <ul><div class="col-sm-3">Date of Birth: <%= director.dob %></div>
+    </div></ul>
+    <div class="row">
+        <ul><div class="col-sm-12"><%= director.bio %></div></ul>
+    </div>
+</div>
+
+
+<% end %>

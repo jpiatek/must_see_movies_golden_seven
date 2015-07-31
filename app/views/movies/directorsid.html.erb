@@ -1,0 +1,19 @@
+<h1><%=@director.name%>
+
+</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+        <ul><img src="<%= @director.image_url %>" width="80">
+        </div></ul>
+    </div>
+    <div class="row">
+         <ul><div class="col-sm-3">Date of Birth: <%= @director.dob %></div></ul>
+    </div>
+    <div class="row">
+        <ul><div class="col-sm-12"><%= @director.bio %></div></ul>
+    </div>
+</div>
+
+<a href="http://localhost:3000/">Home</a>
