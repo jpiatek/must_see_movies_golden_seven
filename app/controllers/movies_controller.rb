@@ -83,7 +83,6 @@ class MoviesController < ActionController::Base
     d.save
 
   redirect_to("http://localhost:3000/")
-
   end
 
 
@@ -99,7 +98,51 @@ class MoviesController < ActionController::Base
 
   redirect_to("http://localhost:3000/")
 
+end
+
+  def edit_actor_form
+
+    @actor = Actor.find(params["id"])
 
   end
+
+  def edit_director_form
+
+  end
+
+  def edit_movie_form
+
+  end
+
+  def update_actor
+
+    @actor = Actor.find(params["id"])
+
+    p = Actor.find(params["id"])
+    p.name = params["the_name"]
+    p.dob = params["the_dob"]
+    p.bio = params["the_source"]
+    p.image_url = params["the_image_url"]
+    p.save
+
+    redirect_to("http://localhost:3000/")
+  end
+
+
+  def update_director
+
+    @director = Director.find(params["id"])
+
+    d = Director.find(params["id"])
+    d.name = params["the_name"]
+    d.dob = params["the_dob"]
+    d.bio = params["the_source"]
+    d.image_url = params["the_image_url"]
+    d.save
+
+    redirect_to("http://localhost:3000/")
+  end
+
+
 
 end

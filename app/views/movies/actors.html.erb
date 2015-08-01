@@ -20,6 +20,13 @@ Actors
         <ul><div class="col-sm-12"><%= actor.bio %></div></ul>
     </div>
 </div>
+    <a href="/">Home</a>
+      <a href="http://localhost:3000/actors/<%= actor.id %>/edit">Edit</a>
+    </td>
+    <td>
+      <a href="http://localhost:3000/delete_actor/<%= actor.id %>">Delete</a>
+    </td>
+
 
 
 <% end %>

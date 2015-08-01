@@ -5,16 +5,22 @@ Rails.application.routes.draw do
   get("/directors",                 { :controller => "movies", :action => "directors" })
   get("/directors/new_form",        { :controller => "movies", :action => "new_director" })
   get("/directors/create_director", { :controller => "movies", :action => "create_director" })
+  get("/directors/:id/edit",        { :controller => "movies", :action => "edit_director_form"})
+  get("/update_director/:id",          { :controller => "movies", :action => "update_director" })
   get("/directors/:id",             { :controller => "movies", :action => "directorsid" })
 
   get("/movies",                    { :controller => "movies", :action => "movies" })
   get("/movies/new_form",           { :controller => "movies", :action => "new_movie" })
   get("/movies/create_movie",       { :controller => "movies", :action => "create_movie" })
+  get("/movies/:id/edit",           { :controller => "movies", :action => "edit_movie_form"})
+  get("/update_movie/:id",          { :controller => "movies", :action => "update_movie" })
   get("/movies/:id",                { :controller => "movies", :action => "moviesid" })
 
   get("/actors",                    { :controller => "movies", :action => "actors" })
   get("/actors/new_form",           { :controller => "movies", :action => "new_actor" })
   get("/actors/create_actor",       { :controller => "movies", :action => "create_actor" })
+  get("/actors/:id/edit",           { :controller => "movies", :action => "edit_actor_form"})
+  get("/update_actor/:id",          { :controller => "movies", :action => "update_actor" })
   get("/actors/:id",                { :controller => "movies", :action => "actorsid" })
 
 
