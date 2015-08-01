@@ -1,16 +1,26 @@
 Rails.application.routes.draw do
 
-  get("/",            { :controller => "movies", :action => "index" })
-  get("/directors",   { :controller => "movies", :action => "directors" })
-  get("/directors/:id", { :controller => "movies", :action => "directorsid" })
-  get("/movies",      { :controller => "movies", :action => "movies" })
-  get("/movies/:id",  { :controller => "movies", :action => "moviesid" })
-  get("/actors",      { :controller => "movies", :action => "actors" })
-  get("/actors/:id",  { :controller => "movies", :action => "actorsid" })
-  get("/delete_director/:id",  { :controller => "movies", :action => "delete_director" })
-  get("/delete_actor/:id",  { :controller => "movies", :action => "delete_actor" })
-  get("/delete_movie/:id",  { :controller => "movies", :action => "delete_movie" })
+  get("/",                          { :controller => "movies", :action => "index" })
 
+  get("/directors",                 { :controller => "movies", :action => "directors" })
+  get("/directors/new_form",        { :controller => "movies", :action => "new_director" })
+  get("/directors/create_director", { :controller => "movies", :action => "create_director" })
+  get("/directors/:id",             { :controller => "movies", :action => "directorsid" })
+
+  get("/movies",                    { :controller => "movies", :action => "movies" })
+  get("/movies/new_form",           { :controller => "movies", :action => "new_movie" })
+  get("/movies/create_movie",       { :controller => "movies", :action => "create_movie" })
+  get("/movies/:id",                { :controller => "movies", :action => "moviesid" })
+
+  get("/actors",                    { :controller => "movies", :action => "actors" })
+  get("/actors/new_form",           { :controller => "movies", :action => "new_actor" })
+  get("/actors/create_actor",       { :controller => "movies", :action => "create_actor" })
+  get("/actors/:id",                { :controller => "movies", :action => "actorsid" })
+
+
+  get("/delete_director/:id",       { :controller => "movies", :action => "delete_director" })
+  get("/delete_actor/:id",          { :controller => "movies", :action => "delete_actor" })
+  get("/delete_movie/:id",          { :controller => "movies", :action => "delete_movie" })
 
 
 

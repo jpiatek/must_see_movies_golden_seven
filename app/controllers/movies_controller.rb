@@ -51,6 +51,55 @@ class MoviesController < ActionController::Base
     redirect_to("http://localhost:3000/")
   end
 
+  def new_movie
+  end
 
+  def new_actor
+  end
+
+  def new_director
+  end
+
+  def create_actor
+
+    a = Actor.new
+    a.name = params["the_name"]
+    a.dob = params["the_dob"]
+    a.bio = params["the_bio"]
+    a.image_url = params["the_image_url"]
+    a.save
+
+  redirect_to("http://localhost:3000/")
+  end
+
+
+  def create_director
+
+    d = Director.new
+    d.name = params["the_name"]
+    d.dob = params["the_dob"]
+    d.bio = params["the_bio"]
+    d.image_url = params["the_image_url"]
+    d.save
+
+  redirect_to("http://localhost:3000/")
+
+  end
+
+
+  def create_movie
+
+    m = Movie.new
+    m.title = params["the_title"]
+    m.year = params["the_year"]
+    m.duration = params["the_duration"]
+    m.description = params["the_description"]
+    m.image_url = params["the_image_url"]
+    m.save
+
+  redirect_to("http://localhost:3000/")
+
+
+  end
 
 end
