@@ -108,9 +108,13 @@ end
 
   def edit_director_form
 
+    @director = Director.find(params["id"])
+
   end
 
   def edit_movie_form
+
+    @movie = Movie.find(params["id"])
 
   end
 
@@ -143,6 +147,21 @@ end
     redirect_to("http://localhost:3000/")
   end
 
+
+  def update_movie
+
+    @movie = Movie.find(params["id"])
+
+    m = Movie.find(params["id"])
+    m.title = params["the_title"]
+    m.year = params["the_year"]
+    m.duration = params["the_duration"]
+    m.description = params["the_description"]
+    m.image_url = params["the_image_url"]
+    m.save
+
+    redirect_to("http://localhost:3000/")
+  end
 
 
 end
